@@ -2,7 +2,9 @@ package com.gustavo.hrpayroll;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
+@EnableFeignClients // Basic Configuration to Feign works
 @SpringBootApplication
 public class HrPayrollApplication {
 
