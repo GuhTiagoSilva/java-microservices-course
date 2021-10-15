@@ -17,7 +17,7 @@ public class UserResource {
     @GetMapping(value = "/search")
     public ResponseEntity<User> findByEmail(@RequestParam String email) {
        try {
-           User user = userService.getUser(email);
+           User user = userService.loadUserByUsername(email);
            return ResponseEntity.ok(user);
        } catch(IllegalArgumentException e) {
            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
